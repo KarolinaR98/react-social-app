@@ -55,7 +55,7 @@ const Login = (props) => {
     return (
         <div className="login">
             {props.user && <Navigate to="/" />}
-            <form onSubmit={handleSubmit}>
+            <form className='loginForm' onSubmit={handleSubmit}>
                 <input type="text" name="username" id="username" placeholder="User name" value={formData.username} onChange={handleInputChange} />
                 <input type="password" name="password" id="password" placeholder="Password" value={formData.password} onChange={handleInputChange} />
                 <p className='loginMessage'>{loginMessage}</p>
