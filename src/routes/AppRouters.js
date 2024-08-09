@@ -10,7 +10,7 @@ const AppRouters = (props) => {
         <Routes>
             <Route path="/" element={<Home user={props.user}/>}/>
             <Route path="/login" element={<Login user={props.user} setUser={props.setUser} />}/>
-            <Route path="/signup" element={<SignUp/>}/>
+            <Route path="/signup" element={<SignUp user={props.user}/>}/>
         </Routes>
     )
 }

@@ -1,0 +1,21 @@
+.signUp form{
+    border: 1px solid black;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.signUp form button{
+    margin-top: 25px;
+}
+
+p.error { 
+    color: red;
+    font-weight: bold;
+}
+
+.signUp form button:disabled{
+    background-color: lightgrey;
+    cursor: not-allowed;
+}

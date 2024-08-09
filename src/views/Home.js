@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Post from "../components/Post";
 import AddPost from "../components/AddPost";
+import FollowRecommendations from "../components/FollowRecommendations";
 
 const Home = (props) => {
 
@@ -59,10 +60,11 @@ const Home = (props) => {
     return(
         <div className="home">
             {props.user && <AddPost getPrevPosts={getPrevPosts} />}
+            {props.user && <FollowRecommendations user={props.user} getLatestPosts={getLatestPosts} posts={posts}/>}
             <div className="postList">
                 {posts.map((post) => {
                     return <Post post={post}
-                    key={post.id}/>
+                    key={post.id} user={props.user} setPosts={setPosts} getLatestPosts={getLatestPosts}/>
                 })}
             </div>
             <button onClick={getNextPosts}>Load more</button>

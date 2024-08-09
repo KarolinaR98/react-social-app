@@ -10,10 +10,11 @@ a{
   color: black;
 }
 
-button {
+button,
+.btn {
   font-size: 15px;
   padding: 10px;
-  margin: 20px 0;
+  margin: 10px 5px;
   background-color: #fff;
   border: 1px solid black;
   border-radius: 5px;
